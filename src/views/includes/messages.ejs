@@ -1,0 +1,19 @@
+<% if(errors.length > 0) {%>
+    <% console.log(errors); %>
+    <h1 class="danger">
+        <% errors.forEach(erro => { %>
+            <%= erro %> <br>
+        <%}); %>
+    </h1>
+
+<%  }%>
+
+<% if(success.length > 0) {%>
+    <% console.log(success); %>
+    <h1 class="success">
+        <% success.forEach(success => { %>
+            <%= success %> <br>
+        <%}); %>
+    </h1>
+
+<%  }%>

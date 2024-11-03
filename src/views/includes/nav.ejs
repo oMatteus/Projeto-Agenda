@@ -1,0 +1,22 @@
+<nav id="nav-menu">
+    <ul>
+        <li>
+            <a href="/">Home</a>
+        </li>
+
+        <li>
+            <a href="/contact">Cadastrar Contatos</a>
+        </li>
+
+        <% if(user) {%>
+            <li>
+                <a href="/login/logout">Sair</a>
+            </li>
+        <%}else{%>
+            <li>
+                <a href="/login">Entrar</a>
+            </li>
+        <% }%>
+
+    </ul>
+</nav>

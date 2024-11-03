@@ -1,0 +1,16 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+    <section class="container">
+
+       <div>
+            <h1>Olá, <%= user.email%></h1> 
+            <p>Você já esta logado, <a href="/" style="text-decoration: underline;">clique aqui</a> para adicionar contados em sua agenda</p>
+       </div>
+
+       <%- include('includes/messages') %>
+
+    </section>
+
+
+<%- include('includes/footer') %>
