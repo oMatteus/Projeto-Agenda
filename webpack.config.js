@@ -1,4 +1,6 @@
 const path = require('path');  //CommonJS
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 
 
 module.exports = {
@@ -23,14 +25,17 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                test: /\.css$/, // Regra para arquivos .css
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
-            {
-                test: /\.(png|jpg|jpeg|gif|svg)$/i,
-                type: 'asset/resource',
-            }
         ],
     },
+
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: '../styles/styles.css',  // Nome do arquivo CSS gerado
+        }),
+      ],
+
     devtool: 'source-map' //mapeia o código compilado para facilitar o apontamento de erros no debug
 };

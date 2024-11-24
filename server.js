@@ -21,6 +21,7 @@ const csrf = require('csurf');
 
 const {middlewareGlobal, checkCsrfError, csrfMiddleware} = require('./src/middlewares/middleware')
 
+//O helmet será comentado para deploy da aplicação na AWS. Como no momento nao há domínio, a comunicação será pelo porta 80
 // app.use(helmet())
 
 app.use(express.urlencoded({extended:true})); //trata o body das requisições para termos um objeto a partir dela
