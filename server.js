@@ -21,7 +21,7 @@ const csrf = require('csurf');
 
 const {middlewareGlobal, checkCsrfError, csrfMiddleware} = require('./src/middlewares/middleware')
 
-app.use(helmet())
+// app.use(helmet())
 
 app.use(express.urlencoded({extended:true})); //trata o body das requisições para termos um objeto a partir dela
 app.use(express.json()); //Permite postar json para dentro da nossa aplicação
